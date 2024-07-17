@@ -1,0 +1,209 @@
+.about_container{
+    height: 100vh;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    margin-top: 2rem;
+
+    @media screen and (min-width:320px) and (max-width:767px){
+        display: block;
+        padding: 1rem;
+    }
+
+    @media screen and (min-width:768px) and (max-width:1023px){
+        display: flex;
+        padding: 0rem;
+        gap: 5rem;
+    }
+
+    @media screen and (min-width:1024px) and (max-width:1439px){
+        gap: 8rem;
+    }
+
+}
+
+
+    .left{
+        width: 20vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        .profile_pic{
+            height: 300px;
+            width: 300px;
+            /* background-color:#6de7da; */
+            border-radius: 2rem;
+            padding: 1rem;
+            z-index: 2;
+        }
+
+        .rectangle{
+            height: 300px;
+            width: 300px;
+            position: absolute;
+            top: 44px;
+            right: -59px;
+            border: 12px solid cyan;
+            border-radius: 1.5rem;
+            z-index: 1;
+        }
+
+        @media screen and (min-width:320px) and (max-width:767px){
+            .profile_pic{
+                display: none;
+            }
+            .rectangle{
+                display: none;
+            }
+        }
+    
+        @media screen and (min-width:768px) and (max-width:1023px){
+            .profile_pic{
+                display: block;
+                height: 250px;
+                width: 250px;
+                padding: 0rem;
+                border-radius: 1.5rem;
+            }
+            .rectangle{
+                display: none;
+            }
+        }
+    
+        @media screen and (min-width:1024px) and (max-width:1439px){
+            .profile_pic{
+                display: block;
+                height: 250px;
+                width: 250px;
+                padding: 0rem;
+                border-radius: 0.8rem;
+            }
+            .rectangle{
+                height: 250px;
+                width: 250px;
+                position: absolute;
+                top: 14px;
+                right: -59px;
+                border: 12px solid cyan;
+                border-radius: 1.5rem;
+                z-index: 1;
+            }
+        }
+    
+    }
+
+    .right{
+        width: 50vw;
+
+        .heading{
+            font-size: 3rem;
+            font-weight: 500;
+            margin-bottom: .5rem;
+            margin-left: 0;
+            text-align: left;
+
+        }
+
+        .intro{
+         text-align: justify; 
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: rgb(144, 142, 142);
+        }
+
+        .btn_container{
+            .hire_btn{
+                /* margin-left: 2rem; */
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                padding: 1rem 2rem;
+                margin-top: 1.5rem;
+                border-radius: 0.75rem;
+                text-transform: capitalize;
+                font-size: 1rem;
+                font-weight: 600;
+                background: linear-gradient(to right, #00c6ff, #0072ff);
+                color: #fff;
+                transition: 0.3s all ease-in-out;
+                outline: none;
+            }
+
+            .hire_btn:hover{
+                scale: 0.9;
+                border: none;
+                color: black;
+            }
+
+        }
+
+        @media screen and (min-width:320px) and (max-width:767px){
+            display: flex;
+            flex-direction: column;
+            width: auto;
+
+            .profile_pic_right{
+                height: 200px;
+                width: 200px;
+                border-radius: 1rem;
+                align-self: center;
+                margin: 1rem 0;
+            }
+
+            .heading{
+                font-size: 2rem;
+                font-weight: 500;
+                margin-bottom: .5rem;
+                margin-left: 0;    
+            }
+    
+            .intro{
+             text-align: justify; 
+            font-size: 1rem;
+            font-weight: 400;
+            color: rgb(144, 142, 142);
+            }
+
+            .btn_container{
+                .hire_btn{
+                    padding: 0.6rem 0.8rem;
+                    border-radius: 0.5rem;
+                    font-size: 0.75rem;
+                    font-weight: 500;
+                }
+            }
+        }
+    
+        @media screen and (min-width:768px) and (max-width:1023px){
+            .profile_pic_right{
+               display: none;
+            }
+
+            .heading{
+                font-size: 2rem;  
+            }
+    
+            .intro{
+            font-size: 1rem;
+            font-weight: 400;
+            }
+        }
+    
+        @media screen and (min-width:1024px) and (max-width:1439px){
+            .profile_pic_right{
+                display: none;
+             }
+        }
+    
+        @media screen and (min-width:1440px) {
+            .profile_pic_right{
+                display: none;
+             }
+        }
+
+    }
+

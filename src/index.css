@@ -1,0 +1,57 @@
+[data-theme="light"] {
+
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --heading-color: #d1d1d1;
+}
+
+[data-theme="dark"] {
+    /* --bg-color:linear-gradient(135deg, #ad5389, #3c1053); */
+    --bg-color:linear-gradient(135deg, #000000, #434343); ;
+    /* --bg-color:  #000000 ; */
+    /* --bg-color: linear-gradient(to right, #485563, #29323c); */
+    --bg-color: #101630;
+    --text-color: #ffffff;
+    --heading-color: #444444;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    /* font-family: "inter", sans-serif;
+     */
+     /* font-family: "Inter", sans-serif; */
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(144, 145, 145);
+    width: 8px;
+}
+::-webkit-scrollbar-thumb{
+    background-color:rgb(179, 125, 86);
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    border-radius: 5px;
+    width: 8px;
+}
+
+.btn{
+    border: none;
+    cursor: pointer;
+}
+
+
+
+

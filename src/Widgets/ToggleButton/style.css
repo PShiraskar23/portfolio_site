@@ -1,0 +1,51 @@
+.container{
+    height: 50px;
+    width: 100px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.tube{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100px;
+    border-radius: 30px;
+    background-color: #3eb2ed;
+    transition: 0.3s all ease-in-out;
+}
+
+.circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: orange;  
+    transition: 0.3s all ease-in-out;
+
+    .sun{
+        scale: 0.8;
+        color: black;
+    }
+}
+
+.on .tube{
+    background-color: #484848;
+    /* background-color: #38156d; */
+    background-color: #222257;
+    
+}
+.on .circle{
+    background-color: #fff;
+    background: none;
+    transform: translateX(50px);
+
+    .moon{
+        transform: rotate(25deg);
+        scale: 1.5;
+        color: #fff;
+    }
+}

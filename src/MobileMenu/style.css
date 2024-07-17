@@ -1,0 +1,112 @@
+.mobile_menu_container{
+    height: 10vh;
+    width: 100vw;
+    background: var(--bg-color);
+    box-shadow: 2px 5px 5px rgb(0, 0, 0, 0.15);
+    box-shadow: 1px 1px 4px rgb(255, 255, 255, 0.15) ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+
+    .logo{
+        scale: 0.6;
+        cursor: pointer;
+    }
+
+    .menu{
+        margin: 0 10px;
+    }
+
+
+
+    @media screen and (min-width:320px) and (max-width:767px){
+        display: flex;
+    }
+
+    @media screen and (min-width:768px) {
+        display: none;
+    };
+}
+
+.css-4t3x6l-MuiPaper-root-MuiDrawer-paper{
+    background: #101630 !important;
+    border-radius:0  2rem 2rem  0 !important;
+    box-shadow: 1px 1px 4px rgb(255, 255, 255, 0.15) !important;
+
+    .logo{
+        margin: 20px 70px !important;
+        cursor: pointer;
+    }
+
+}
+
+.css-i9fmh8-MuiBackdrop-root-MuiModal-backdrop{
+    background-color: unset !important;
+}
+
+.css-10hburv-MuiTypography-root {
+    padding: 5px 20px !important;
+    font-weight: 600 !important;
+    background-color: aliceblue !important;
+    border-radius: 1rem;
+    color: #101630 !important;
+    text-align: center;
+
+    &:hover{
+        color: #fff !important;
+        background: linear-gradient(to right, #00c6ff, #0072ff) !important;
+    }
+}
+
+.css-10hburv-MuiTypography-root ::hover{
+    background-color:  #5cc5eb !important;
+}
+
+.menuItem{
+    width: 150px;
+    padding: 5px 20px ;
+    font-weight: 600 ;
+    background-color: aliceblue ;
+    border-radius: 1rem;
+    color: #101630 !;
+    text-align: center;
+
+    &:hover{
+        color: #fff !important;
+        background: linear-gradient(to right, #00c6ff, #0072ff) !important;
+    }
+}
+
+.social_menu{
+    position: fixed;
+    bottom: 1rem;
+    display: flex;
+    width: 200px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    /* background-color: #00c6ff; */
+
+
+    .icon_container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 2.5rem;
+        width: 2.5rem;
+        background: linear-gradient(45deg, #4fa4da, #4b4dc6);
+        border-radius: 0.8rem;
+        cursor: pointer;
+
+        .icon{
+            scale: 1.2;
+            color: #fff;
+        }
+
+    }
+}

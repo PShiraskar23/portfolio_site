@@ -1,0 +1,105 @@
+.carousal{
+    /* height: 80vh; */
+    width: 70vw;
+    padding:0 3rem 2rem;
+    /* padding: 1rem; */
+    /* background: darkgoldenrod; */
+}
+
+.card_container{
+    height: 450px;
+    width: 250px;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(45deg, #544a7d, #ffd452); 
+    background: linear-gradient(135deg, #4fa4da, #4b4dc6);
+    box-shadow: -2px 2px  4px rgb(69, 67, 67);
+
+}
+
+.img_section{
+    height:150px ;
+    /* width:300px ; */
+    img{
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        border: 1px solid #d8cdcd;
+        border: 1px solid #000;
+    }
+}
+
+.description_section{
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    .title{
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    .content{
+        text-align: justify;
+        font-size: 1rem;
+        font-weight: 500;
+        color: black;
+        height: 160px;
+        padding: 5px ;
+        overflow: auto;
+    }
+}
+
+.card_btn{
+    padding: 0.6rem 2rem;
+    margin-top: 1.2rem;
+    border-radius: 0.75rem;
+    text-transform:capitalize;
+    font-size: 1rem;    
+    font-weight: 600;
+
+    background: linear-gradient(135deg, #bc4e9c, #f80759); 
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    background: linear-gradient(45deg, #00f260, #0575e6);
+    color: #fff;
+    transition: 0.3s all ease-in-out;
+    outline: none;
+
+    .link{
+        transition: 0.3s all ease-in-out;
+        text-decoration: none;
+        color: #fff;
+    }
+
+}
+
+.card_btn:hover{
+    scale: 0.9;
+    border: none;
+
+    .link{
+        text-decoration: none;
+        color: black;
+    }
+ 
+}
+
+
+/* @media screen and (min-width:320px) and (max-width:767px){
+}
+
+@media screen and (min-width:768px) and (max-width:1023px){
+
+}
+
+@media screen and (min-width:1024px) and (max-width:1439px){
+
+}
+
+@media screen and (min-width:1440px){
+
+} */

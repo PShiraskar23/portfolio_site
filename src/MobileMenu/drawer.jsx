@@ -23,6 +23,7 @@ const MobileMenuDrawer = () => {
   };
 
   const handleNavigation = (url) => {
+     setOpen(false);
     window.open(url, "_blank");
   };
 

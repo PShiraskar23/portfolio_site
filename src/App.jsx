@@ -8,7 +8,8 @@ import ContactMe from "./ContactMe";
 import Projects from "./Projects";
 import Skills from "./Skills";
 import AboutMe from "./AboutMe";
-import MobileMenuDrawer from "./MobileMenu";
+// import MobileMenuDrawer from "./MobileMenu";
+import MobileMenuDrawer from "./MobileMenu/drawer";
 
 function App() {
   return (

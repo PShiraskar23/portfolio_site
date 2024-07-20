@@ -14,11 +14,11 @@ const Info = () => {
           <TextAnimation texts={["Piyush Shiraskar", "Frontend Developer"]} />
         </p>
         <p>
-          As a web developer, I am responsible for designing and developing web
-          pages. My primary focus is to create responsive, user-friendly
-          experiences that meet the needs of a customer. I am passionate about
-          crafting elegant and efficient code to optimize performance and user
-          satisfaction.
+          Designing and developing responsive, user-friendly web applications is
+          my craft. With a passion for crafting elegant, efficient code, I focus
+          on optimizing performance and enhancing user satisfaction. With over
+          four years of experience in web development, I create seamless digital
+          experiences tailored to meet customer needs.
         </p>
 
         {/* <button className="btn cv_btn">

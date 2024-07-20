@@ -178,7 +178,7 @@ const ContactMe = () => {
 
       <div className="footer">
         <div className="logo">Piyush Shiraskar</div>
-        <div className="warning">Copyright © 2023 . All rights reserved.</div>
+        <div className="warning">Copyright © {new Date().getFullYear()} . All rights reserved.</div>
         <div className="social">
           <div
             className="icon_container"
@@ -192,7 +192,7 @@ const ContactMe = () => {
           </div>
           <div
             className="icon_container"
-            onClick={() => handleNavigation("https://github.com/PShiraskar23")}
+            // onClick={() => handleNavigation("https://github.com/PShiraskar23")}
           >
             <GitHubIcon className="github icon" />
           </div>

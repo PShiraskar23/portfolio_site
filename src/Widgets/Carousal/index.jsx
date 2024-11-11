@@ -6,7 +6,7 @@ import weather_forecast from "../../assets/weather-forecast.png";
 import age_calculator from "../../assets/age-calculator.png";
 import food from "../../assets/food.jpeg";
 import t_comm from "../../assets/tshirt.jpeg";
-import tic_tac from "../../assets/tic-tac.jpeg";
+import tic_tac_toe from "../../assets/tic-tac-toe.webp";
 import movie_app from "../../assets/movie.jpeg";
 import "swiper/css";
 import "./style.css";
@@ -47,9 +47,9 @@ const Slider = () => {
     {
       title: "Tic Tac Toe",
       content:
-        "Enjoy classic Tic Tac Toe with our fun and interactive game. Play against the computer or a friend, and challenge your strategic skills in this timeless game.",
-      link: "",
-      img: tic_tac,
+        "Enjoy classic Tic Tac Toe with our fun and interactive game. Play with a friend, and challenge your strategic skills in this timeless game.",
+      link: "https://play-tic-tac-toe-game-3x3.netlify.app/",
+      img: tic_tac_toe,
     },
     {
       title: "Movie App",

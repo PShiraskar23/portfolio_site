@@ -8,15 +8,23 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { toast } from "react-toastify";
+import { motion } from "framer-motion";
+import { fadeIn } from "../Widgets/animations/variants";
+import useWindowResize from "../hooks/useWindowSize"
 
 const ContactMe = () => {
   const form = useRef();
+  const {width} = useWindowResize()
   const [userObj, setUserObj] = useState({
     user_name: "",
     user_email: "",
     user_msg: "",
   });
 
+  // Adjust animation direction based on screen size
+  const rightDirection = width < 427 ? "up" : "right";
+  const leftDirection = width < 427 ? "up" : "left";
+  
   const handleChange = (e) => {
     const label = e.target.name;
     const val = e.target.value;
@@ -104,11 +112,23 @@ const ContactMe = () => {
   return (
     <div className="contact_container" id="ContactMe">
       <div className="heading">
-        <p>Contact Me</p>
+        <motion.p 
+          variants={fadeIn("up", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.7 }}
+          >
+            Contact Me
+            </motion.p>
       </div>
 
       <div className="center_container">
-        <div className="left_container">
+        <motion.div className="left_container"
+          variants={fadeIn(rightDirection, 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.7 }}
+                    >
           <div className="sub_heading">
             {/* <p>Don't be a stranger,</p> */}
             {/* <p>just say hello !</p> */}
@@ -141,9 +161,14 @@ const ContactMe = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="form_container">
+        <motion.div className="form_container"
+            variants={fadeIn(leftDirection, 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.7 }}
+        >
           <form className="form" ref={form} onSubmit={sendEmail}>
             <div className="header"></div>
             <input
@@ -173,7 +198,7 @@ const ContactMe = () => {
             ></textarea>
             <input type="submit" value="send" className="btn send_btn" />
           </form>
-        </div>
+        </motion.div>
       </div>
 
       <div className="footer">

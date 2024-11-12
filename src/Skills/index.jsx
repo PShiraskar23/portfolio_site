@@ -8,6 +8,8 @@ import node from "../assets/node-js.svg";
 import git from "../assets/git.svg";
 import mui from "../assets/material-ui.svg";
 import figma from "../assets/figma.svg";
+import { motion } from "framer-motion";
+import { fadeIn } from "../Widgets/animations/variants";
 
 const Skills = () => {
   const skillsArray = [
@@ -47,12 +49,32 @@ const Skills = () => {
 
   return (
     <div className="skills_container" id="Skills">
-      <div className="heading">Skills</div>
-      <div className="sub_heading">
+      <motion.div
+        variants={fadeIn("right", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.7 }}
+        className="heading"
+      >
+        Skills
+      </motion.div>
+      <motion.div
+        variants={fadeIn("right", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.7 }}
+        className="sub_heading"
+      >
         <p>The skills and tools , I am really good at </p>
-      </div>
+      </motion.div>
 
-      <div className="skills">
+      <motion.div
+        variants={fadeIn("left", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.7 }}
+        className="skills"
+      >
         {skillsArray.map((skill) => {
           return (
             <div key={skill.name} className="skill">
@@ -61,7 +83,7 @@ const Skills = () => {
             </div>
           );
         })}
-      </div>
+      </motion.div>
     </div>
   );
 };

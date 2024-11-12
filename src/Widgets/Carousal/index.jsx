@@ -11,8 +11,10 @@ import movie_app from "../../assets/movie.jpeg";
 import "swiper/css";
 import "./style.css";
 import Card from "./cards";
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../Widgets/animations/variants";
 
 const Slider = () => {
   let projects = [
@@ -44,14 +46,14 @@ const Slider = () => {
     //   link: "",
     //   img: movie_app,
     // },
-        // {
+    // {
     //   title: "T Commerece",
     //   content:
     //     "Explore seamless shopping with our T-commerce platform, offering a wide range of products at your fingertips. Enjoy a convenient, secure, and user-friendly experience for all your online shopping needs.",
     //   link: "",
     //   img: t_comm,
     // },
-       // {
+    // {
     //   title: "Age Calculator",
     //   content:
     //     "Calculate your age in years, months and days with our precise age calculator. Simply enter your birth date to discover detailed insights about your age.",
@@ -60,7 +62,12 @@ const Slider = () => {
     // },
   ];
   return (
-    <div>
+    <motion.div
+      variants={fadeIn("right", 0.2)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.7 }}
+    >
       <Swiper
         className="carousal"
         // className="mySwiper"
@@ -69,7 +76,6 @@ const Slider = () => {
         // navigation={true}
         modules={[Pagination]}
         pagination={{ clickable: true }}
-
         breakpoints={{
           640: {
             slidesPerView: 1,
@@ -95,7 +101,7 @@ const Slider = () => {
           );
         })}
       </Swiper>
-    </div>
+    </motion.div>
   );
 };
 

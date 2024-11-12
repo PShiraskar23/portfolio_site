@@ -3,23 +3,37 @@ import "./style.css";
 import TextAnimation from "../Widgets/TextAnimate";
 import DownloadIcon from "@mui/icons-material/Download";
 import resume from "../assets/Piyush - Frontend Developer.pdf";
+import { motion } from "framer-motion";
+import { fadeIn } from "../Widgets/animations/variants";
 
 const Info = () => {
   return (
     <div className="info_container" id="Navbar">
       <div className="left_section">
-        <p>Hey there !</p>
+        <motion.p
+          variants={fadeIn("left", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.7 }}
+        >
+          Hey there !
+        </motion.p>
 
         <p>
           <TextAnimation texts={["Piyush Shiraskar", "Frontend Developer"]} />
         </p>
-        <p>
+        <motion.p
+          variants={fadeIn("left", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.7 }}
+        >
           Designing and developing responsive, user-friendly web applications is
           my craft. With a passion for crafting elegant, efficient code, I focus
           on optimizing performance and enhancing user satisfaction. With over
           four years of experience in web development, I create seamless digital
           experiences tailored to meet customer needs.
-        </p>
+        </motion.p>
 
         {/* <button className="btn cv_btn">
           Download CV <DownloadIcon />

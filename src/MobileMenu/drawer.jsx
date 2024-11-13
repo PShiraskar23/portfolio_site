@@ -55,7 +55,7 @@ const MobileMenuDrawer = () => {
       <button className="menu_button" onClick={toggleDrawer}>
         ☰
       </button>
-      {open && (
+      {/* {open && ( */}
         <div ref={drawerRef} className={`drawer ${open ? "open" : ""}`}>
           <div className="drawer_header">
             <Link
@@ -114,7 +114,7 @@ const MobileMenuDrawer = () => {
             </div>
           </div>
         </div>
-      )}
+      {/* // )} */}
     </div>
   );
 };

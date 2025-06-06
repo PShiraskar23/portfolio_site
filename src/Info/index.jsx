@@ -1,14 +1,16 @@
 import React from "react";
 import "./style.css";
-import TextAnimation from "../Widgets/TextAnimate";
-import DownloadIcon from "@mui/icons-material/Download";
-import resume from "../assets/Piyush - Frontend Developer.pdf";
 import { motion } from "framer-motion";
+import { Element} from 'react-scroll';
+import DownloadIcon from "@mui/icons-material/Download";
+
+import TextAnimation from "../Widgets/TextAnimate";
 import { fadeIn } from "../Widgets/animations/variants";
+import resume from "../assets/Piyush - Frontend Developer.pdf";
 
 const Info = () => {
   return (
-    <div className="info_container" id="Navbar">
+    <Element className="info_container" id="Navbar">
       <div className="left_section">
         <motion.p
           variants={fadeIn("left", 0.2)}
@@ -72,7 +74,7 @@ const Info = () => {
           />
         </svg>
       </div>
-    </div>
+    </Element>
   );
 };
 

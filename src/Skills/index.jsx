@@ -1,54 +1,56 @@
 import React from "react";
 import "./style.css";
-import html from "../assets/html-5.svg";
-import css from "../assets/css-3.svg";
+import { motion } from "framer-motion";
+import { Element} from 'react-scroll';
+
 import js from "../assets/js.svg";
+import ts from "../assets/ts.svg";
 import react from "../assets/react.svg";
+import next from "../assets/next.svg";
 import node from "../assets/node-js.svg";
 import git from "../assets/git.svg";
-import mui from "../assets/material-ui.svg";
-import figma from "../assets/figma.svg";
-import { motion } from "framer-motion";
+import tailwind from "../assets/tailwind.svg";
+import apollo from "../assets/apollo.svg";
 import { fadeIn } from "../Widgets/animations/variants";
 
 const Skills = () => {
   const skillsArray = [
     {
-      name: "HTML 5",
-      logo: html,
-    },
-    {
-      name: "CSS 3",
-      logo: css,
-    },
-    {
       name: "Javascript",
       logo: js,
     },
     {
-      name: "React",
+      name: "Typescript",
+      logo: ts,
+    },
+    {
+      name: "React JS",
       logo: react,
+    },
+    {
+      name: "Next JS",
+      logo: next,
     },
     {
       name: "Node JS",
       logo: node,
     },
     {
-      name: "Materil UI",
-      logo: mui,
+      name: "Apollo GraphQL",
+      logo: apollo,
+    },
+    {
+      name: "Tailwind CSS",
+      logo: tailwind,
     },
     {
       name: "Git",
       logo: git,
     },
-    {
-      name: "Figma",
-      logo: figma,
-    },
   ];
 
   return (
-    <div className="skills_container" id="Skills">
+    <Element className="skills_container" id="Skills" >
       <motion.div
         variants={fadeIn("right", 0.2)}
         initial="hidden"
@@ -84,7 +86,7 @@ const Skills = () => {
           );
         })}
       </motion.div>
-    </div>
+    </Element>
   );
 };
 

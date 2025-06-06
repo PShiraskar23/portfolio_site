@@ -1,14 +1,15 @@
 import "./style.css";
 import React, { useState, useRef } from "react";
-import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
+import { motion } from "framer-motion";
+import { Element} from 'react-scroll';
+import emailjs from "@emailjs/browser"; 
 import CallIcon from "@mui/icons-material/Call";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import { toast } from "react-toastify";
-import { motion } from "framer-motion";
 import { fadeIn } from "../Widgets/animations/variants";
 import useWindowResize from "../hooks/useWindowSize"
 
@@ -110,7 +111,7 @@ const ContactMe = () => {
   };
 
   return (
-    <div className="contact_container" id="ContactMe">
+    <Element className="contact_container" id="ContactMe">
       <div className="heading">
         <motion.p 
           variants={fadeIn("up", 0.2)}
@@ -229,7 +230,7 @@ const ContactMe = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Element>
   );
 };
 

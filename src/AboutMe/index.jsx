@@ -1,28 +1,30 @@
-import React from "react";
 import "./style.css";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import DownloadIcon from "@mui/icons-material/Download";
-import { Link } from "react-scroll";
-import piyushImg from "../assets/picofme (7).png";
+import React from "react";
+import {Element, Link } from "react-scroll";
 import { motion } from "framer-motion";
+
+import piyushImg from "../assets/picofme (7).png";
 import { fadeIn } from "../Widgets/animations/variants";
 import useWindowResize from "../hooks/useWindowSize";
+// import GitHubIcon from "@mui/icons-material/GitHub";
+// import LinkedInIcon from "@mui/icons-material/LinkedIn";
+// import InstagramIcon from "@mui/icons-material/Instagram";
+// import DownloadIcon from "@mui/icons-material/Download";
+
 
 const AboutMe = () => {
   const { width } = useWindowResize();
   const leftDirection = width < 427 ? "up" : "left";
 
   return (
-    <div className="about_container" id="About">
+    <Element  className="about_container" id="About">
       <div className="left">
         <img className="profile_pic" src={piyushImg} alt="pic" />
         <div className="rectangle"></div>
       </div>
 
       <motion.div
-        variants={fadeIn(leftDirection, 0.2)}
+        variants={fadeIn(leftDirection, 0.3)}
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: false, amount: 0.7 }}
@@ -45,7 +47,7 @@ const AboutMe = () => {
           {/* <button className="btn resume_btn"> Download CV <DownloadIcon /></button> */}
         </div>
       </motion.div>
-    </div>
+    </Element>
   );
 };
 

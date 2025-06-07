@@ -1,11 +1,11 @@
 import "./style.css";
 import React from "react";
 import {Element, Link } from "react-scroll";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
-import piyushImg from "../assets/picofme (7).png";
-import { fadeIn } from "../Widgets/animations/variants";
 import useWindowResize from "../hooks/useWindowSize";
+import piyushImg from "../assets/picofme (7).png";
+// import { fadeIn } from "../Widgets/animations/variants";
 // import GitHubIcon from "@mui/icons-material/GitHub";
 // import LinkedInIcon from "@mui/icons-material/LinkedIn";
 // import InstagramIcon from "@mui/icons-material/Instagram";
@@ -23,14 +23,14 @@ const AboutMe = () => {
         <div className="rectangle"></div>
       </div>
 
-      <motion.div
-        variants={fadeIn(leftDirection, 0.3)}
-        initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: false, amount: 0.7 }}
+      <div
+        // variants={fadeIn(leftDirection, 0.3)}
+        // initial="hidden"
+        // whileInView={"show"}
+        // viewport={{ once: false, amount: 0.7 }}
         className="right"
       >
-        <motion.p className="heading">About Me</motion.p>
+        <p className="heading">About Me</p>
         <img className="profile_pic_right" src={piyushImg} alt="pic" />
         <p className="intro">
           Skilled web developer with more than four years of hands-on experience
@@ -46,7 +46,7 @@ const AboutMe = () => {
           </Link>
           {/* <button className="btn resume_btn"> Download CV <DownloadIcon /></button> */}
         </div>
-      </motion.div>
+      </div>
     </Element>
   );
 };

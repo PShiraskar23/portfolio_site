@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
-import { motion } from "framer-motion";
 import { Element} from 'react-scroll';
+// import { motion } from "framer-motion";
 
 import js from "../assets/js.svg";
 import ts from "../assets/ts.svg";
@@ -11,7 +11,7 @@ import node from "../assets/node-js.svg";
 import git from "../assets/git.svg";
 import tailwind from "../assets/tailwind.svg";
 import apollo from "../assets/apollo.svg";
-import { fadeIn } from "../Widgets/animations/variants";
+// import { fadeIn } from "../Widgets/animations/variants";
 
 const Skills = () => {
   const skillsArray = [
@@ -51,30 +51,30 @@ const Skills = () => {
 
   return (
     <Element className="skills_container" id="Skills" >
-      <motion.div
-        variants={fadeIn("right", 0.2)}
-        initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: false, amount: 0.7 }}
+      <div
+        // variants={fadeIn("right", 0.2)}
+        // initial="hidden"
+        // whileInView={"show"}
+        // viewport={{ once: false, amount: 0.7 }}
         className="heading"
       >
         Skills
-      </motion.div>
-      <motion.div
-        variants={fadeIn("right", 0.2)}
-        initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: false, amount: 0.7 }}
+      </div>
+      <div
+        // variants={fadeIn("right", 0.2)}
+        // initial="hidden"
+        // whileInView={"show"}
+        // viewport={{ once: false, amount: 0.7 }}
         className="sub_heading"
       >
         <p>The skills and tools , I am really good at </p>
-      </motion.div>
+      </div>
 
-      <motion.div
-        variants={fadeIn("left", 0.2)}
-        initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: false, amount: 0.7 }}
+      <div
+        // variants={fadeIn("left", 0.2)}
+        // initial="hidden"
+        // whileInView={"show"}
+        // viewport={{ once: false, amount: 0.7 }}
         className="skills"
       >
         {skillsArray.map((skill) => {
@@ -85,7 +85,7 @@ const Skills = () => {
             </div>
           );
         })}
-      </motion.div>
+      </div>
     </Element>
   );
 };

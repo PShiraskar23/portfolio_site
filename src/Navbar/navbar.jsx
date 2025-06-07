@@ -1,8 +1,9 @@
-import ToggleBtn from "../Widgets/ToggleButton/toggleBtn";
-import "./style.css";
-import logo from "../assets/P logo 1.svg";
 import { Link } from "react-scroll";
+import "./style.css";
+
 import BrandLogo from "../Logos/p_logo";
+// import ToggleBtn from "../Widgets/ToggleButton/toggleBtn";
+// import logo from "../assets/P logo 1.svg";
 
 const Navbar = () => {
   return (

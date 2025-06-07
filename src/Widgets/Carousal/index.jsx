@@ -1,20 +1,20 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
-import { Navigation } from "swiper/modules";
-import weather_forecast from "../../assets/weather-forecast.png";
-import age_calculator from "../../assets/age-calculator.png";
-import food from "../../assets/delicious_feast.webp";
-import t_comm from "../../assets/tshirt.jpeg";
-import tic_tac_toe from "../../assets/tic-tac-toe.webp";
-import movie_app from "../../assets/movie.jpeg";
-import "swiper/css";
 import "./style.css";
-import Card from "./cards";
+import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { motion } from "framer-motion";
-import { fadeIn } from "../../Widgets/animations/variants";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+// import { motion } from "framer-motion";
+
+import weather_forecast from "../../assets/weather-forecast.png";
+import food from "../../assets/delicious_feast.webp";
+import tic_tac_toe from "../../assets/tic-tac-toe.webp";
+import Card from "./cards";
+// import age_calculator from "../../assets/age-calculator.png";
+// import t_comm from "../../assets/tshirt.jpeg";
+// import movie_app from "../../assets/movie.jpeg";
+// import { fadeIn } from "../../Widgets/animations/variants";
 
 const Slider = () => {
   let projects = [
@@ -62,11 +62,11 @@ const Slider = () => {
     // },
   ];
   return (
-    <motion.div
-      variants={fadeIn("right", 0.2)}
-      initial="hidden"
-      whileInView={"show"}
-      viewport={{ once: false, amount: 0.7 }}
+    <div
+      // variants={fadeIn("right", 0.2)}
+      // initial="hidden"
+      // whileInView={"show"}
+      // viewport={{ once: false, amount: 0.7 }}
     >
       <Swiper
         className="carousal"
@@ -101,7 +101,7 @@ const Slider = () => {
           );
         })}
       </Swiper>
-    </motion.div>
+    </div>
   );
 };
 

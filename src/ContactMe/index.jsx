@@ -1,5 +1,6 @@
+import React, { useState, useRef ,useEffect} from "react";
 import "./style.css";
-import React, { useState, useRef } from "react";
+import * as amplitude from '@amplitude/analytics-browser';
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
 import { Element} from 'react-scroll';
@@ -10,6 +11,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
+
 import { fadeIn } from "../Widgets/animations/variants";
 import useWindowResize from "../hooks/useWindowSize"
 
@@ -87,6 +89,11 @@ const ContactMe = () => {
                 progress: undefined,
                 theme: "colored",
               });
+
+              amplitude.track('filled_contact_form', {
+                buttonType: 'contact_form',
+                location: 'contact_section',
+              });
             }
           },
           (error) => {
@@ -109,6 +116,13 @@ const ContactMe = () => {
   const handleNavigation = (url) => {
     window.open(url, "_blank");
   };
+
+  useEffect(()=>{
+    amplitude.track('contact_section', {
+      buttonType: 'last_page',
+      location: 'contact_section',
+    });
+  },[])
 
   return (
     <Element className="contact_container" id="ContactMe">

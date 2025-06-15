@@ -43,9 +43,9 @@ const TextAnimation = ({ texts }) => {
   }, [displayText, currentIndex, isErasing, isTextChanging, textIndex, texts]);
 
   return (
-    <div className="text_animate">
+    <span className="text_animate">
       <span>I Am </span> {displayText}
-    </div>
+    </span>
   );
 };
 

@@ -1,5 +1,6 @@
-import React from "react";
+import React , { useEffect }from "react";
 import "./style.css";
+import * as amplitude from '@amplitude/analytics-browser';
 import { motion } from "framer-motion";
 import { Element} from 'react-scroll';
 import DownloadIcon from "@mui/icons-material/Download";
@@ -9,6 +10,14 @@ import { fadeIn } from "../Widgets/animations/variants";
 import resume from "../assets/Piyush - Frontend Developer.pdf";
 
 const Info = () => {
+
+useEffect(()=>{
+    amplitude.track('hero_section', {
+      buttonType: 'first_page',
+      location: 'hero_section',
+    });
+  },[])
+
   return (
     <Element className="info_container" id="Navbar">
       <div className="left_section">

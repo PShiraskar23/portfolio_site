@@ -1,5 +1,6 @@
 import "./App.css";
-import React, { useCallback, useRef } from 'react';
+import React, { useCallback, useRef ,useEffect} from 'react';
+import * as amplitude from '@amplitude/analytics-browser';
 import { scroller } from 'react-scroll';
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -52,6 +53,13 @@ function App() {
       }
     }
   };
+
+  useEffect(()=>{
+    amplitude.init('25cb39eb8989fe2a816be75eb2c161ba', {
+      defaultTracking: true,
+      sessions:true
+    });
+  },[])
 
   return (
     <ThemeProvider >

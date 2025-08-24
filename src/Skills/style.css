@@ -26,7 +26,7 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-evenly;
         align-items: center;
         /* background: #5cc5eb; */
         width: 80vw;
@@ -38,6 +38,10 @@
             align-items: center;
             height: 200px;
             width: 250px;
+            background: linear-gradient(135deg, #4fa4da, #4b4dc6);
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+            transition-delay: 0ms;
 
             img{
                 height: 100px;
@@ -45,11 +49,16 @@
             }
 
             label{
-                font-size: 1rem;
-                font-weight: 400;
+                font-size: 1.2rem;
+                font-weight: 500;
                 margin: 0.5rem;
                 text-align: center;
+                color: black;
             }
+        }
+
+        .skill:hover{
+            transform: scale(1.04);
         }
     }
 
@@ -65,16 +74,19 @@
         .sub_heading{
             font-size: 1.25rem;
             font-weight:400;
+            margin-bottom: 20px;
         }
 
         .skills{
+            gap: 30px;
+
             .skill{
-                height: 120px;
+                height: 100px;
                 width: 100px;
     
                 img{
-                    height: 60px;
-                    width: 60px;
+                    height: 40px;
+                    width: 40px;
                 }
     
                 label{
@@ -96,16 +108,19 @@
         .sub_heading{
             font-size: 1.5rem;
             font-weight:400;
+            margin-bottom: 10px;
         }
 
         .skills{
+            gap: 20px;
+
             .skill{
-                height: 150px;
-                width: 150px;
+                height: 130px;
+                width: 130px;
     
                 img{
-                    height: 80px;
-                    width: 80px;
+                    height: 60px;
+                    width: 60px;
                 }
     
                 label{
@@ -118,10 +133,16 @@
     }
 
     @media screen and (min-width:1024px) and (max-width:1439px){
+        .sub_heading{
+            margin-bottom: 20px;
+        }
+
         .skills{
+            gap: 30px;
+            
             .skill{
-                height: 200px;
-                width: 200px;
+                height: 180px;
+                width: 180px;
     
                 img{
                     height: 80px;
@@ -129,8 +150,8 @@
                 }
     
                 label{
-                    font-size: 0.85rem;
-                    font-weight: 400;
+                    font-size: 1rem;
+                    font-weight: 500;
                     margin: 0.5rem;
                 }
             }
@@ -138,7 +159,24 @@
     }
 
     @media screen and (min-width:1440px){
+        .sub_heading{
+            margin-bottom: 30px;
+        }
 
+        .skills{
+            gap: 50px;
+
+            .skill{
+                height: 200px;
+                width: 230px;
+    
+                img{
+                    height: 100px;
+                    width: 100px;
+                }
+    
+            }
+        }
     }
 
 }

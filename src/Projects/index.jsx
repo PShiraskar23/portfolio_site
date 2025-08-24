@@ -1,6 +1,5 @@
 import React from "react";
 import "./style.css";
-import { Element} from 'react-scroll';
 // import { motion } from "framer-motion";
 
 import Slider from "../Widgets/Carousal";
@@ -8,7 +7,7 @@ import Slider from "../Widgets/Carousal";
 
 const Projects = () => {
   return (
-    <Element className="projects_container" id="Projects">
+    <div className="projects_container" id="Projects">
       <p
         // variants={fadeIn("left", 0.2)}
         // initial="hidden"
@@ -18,7 +17,7 @@ const Projects = () => {
         Recent Projects
       </p>
       <Slider />
-    </Element>
+    </div>
   );
 };
 

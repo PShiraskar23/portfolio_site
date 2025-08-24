@@ -1,6 +1,6 @@
 import "./style.css";
 import React from "react";
-import {Element, Link } from "react-scroll";
+import { Link } from "react-scroll";
 // import { motion } from "framer-motion";
 
 import useWindowResize from "../hooks/useWindowSize";
@@ -17,7 +17,7 @@ const AboutMe = () => {
   const leftDirection = width < 427 ? "up" : "left";
 
   return (
-    <Element  className="about_container" id="About">
+    <div  className="about_container" id="About">
       <div className="left">
         <img className="profile_pic" src={piyushImg} alt="pic" />
         <div className="rectangle"></div>
@@ -33,7 +33,7 @@ const AboutMe = () => {
         <p className="heading">About Me</p>
         <img className="profile_pic_right" src={piyushImg} alt="pic" />
         <p className="intro">
-          Skilled web developer with more than four years of hands-on experience
+          Skilled web developer with more than five years of hands-on experience
           in designing, developing, and maintaining dynamic web applications and
           websites. Proficient in front-end technologies, with a proven track
           record of delivering high-quality solutions. As a detail-oriented
@@ -47,7 +47,7 @@ const AboutMe = () => {
           {/* <button className="btn resume_btn"> Download CV <DownloadIcon /></button> */}
         </div>
       </div>
-    </Element>
+    </div>
   );
 };
 

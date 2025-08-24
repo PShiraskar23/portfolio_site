@@ -3,7 +3,6 @@ import "./style.css";
 import * as amplitude from '@amplitude/analytics-browser';
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
-import { Element} from 'react-scroll';
 import emailjs from "@emailjs/browser"; 
 import CallIcon from "@mui/icons-material/Call";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
@@ -125,7 +124,7 @@ const ContactMe = () => {
   },[])
 
   return (
-    <Element className="contact_container" id="ContactMe">
+    <div className="contact_container" id="ContactMe">
       <div className="heading">
         <motion.p 
           variants={fadeIn("up", 0.2)}
@@ -244,7 +243,7 @@ const ContactMe = () => {
           </div>
         </div>
       </div>
-    </Element>
+    </div>
   );
 };
 

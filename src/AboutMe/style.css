@@ -112,7 +112,8 @@
          text-align: justify; 
         font-size: 1.2rem;
         font-weight: 500;
-        color: rgb(144, 142, 142);
+        /* color: rgb(144, 142, 142); */
+        color:#cccccc;
         }
 
         .btn_container{
@@ -165,7 +166,6 @@
              text-align: justify; 
             font-size: 1rem;
             font-weight: 400;
-            color: rgb(144, 142, 142);
             }
 
             .btn_container{

@@ -95,7 +95,7 @@
         text-align: justify;
         font-size: 1.2rem;
         font-weight: 500;
-        color: rgb(144, 142, 142);
+        color:#cccccc;
         margin: 1rem 0;
     }
 
@@ -147,8 +147,7 @@
             text-align: justify;
             font-size: 1rem;
             font-weight: 400;
-            color: rgb(144, 142, 142);
-
+            color:#cccccc;
         }
 
         .info{
@@ -188,7 +187,7 @@
             text-align: justify;
             font-size: 1rem;
             font-weight: 500;
-            color: rgb(144, 142, 142);
+            color:#cccccc;
             margin: 1rem 0;
         }
 
@@ -225,7 +224,7 @@
             text-align: justify;
             font-size: 1.2rem;
             font-weight: 500;
-            color: rgb(144, 142, 142);
+            color:#cccccc;
             margin: 1rem 0;
         }
 

@@ -2,7 +2,6 @@ import React , { useEffect }from "react";
 import "./style.css";
 import * as amplitude from '@amplitude/analytics-browser';
 import { motion } from "framer-motion";
-import { Element} from 'react-scroll';
 import DownloadIcon from "@mui/icons-material/Download";
 
 import TextAnimation from "../Widgets/TextAnimate";
@@ -19,7 +18,7 @@ useEffect(()=>{
   },[])
 
   return (
-    <Element className="info_container" id="Navbar">
+    <div className="info_container" id="Navbar">
       <div className="left_section">
         <motion.p
           variants={fadeIn("left", 0.2)}
@@ -42,7 +41,7 @@ useEffect(()=>{
           Designing and developing responsive, user-friendly web applications is
           my craft. With a passion for crafting elegant, efficient code, I focus
           on optimizing performance and enhancing user satisfaction. With over
-          four years of experience in web development, I create seamless digital
+          five years of experience in web development, I create seamless digital
           experiences tailored to meet customer needs.
         </motion.p>
 
@@ -83,7 +82,7 @@ useEffect(()=>{
           />
         </svg>
       </div>
-    </Element>
+    </div>
   );
 };
 

@@ -1,6 +1,5 @@
 import React from "react";
 import "./style.css";
-import { Element} from 'react-scroll';
 // import { motion } from "framer-motion";
 
 import js from "../assets/js.svg";
@@ -50,7 +49,7 @@ const Skills = () => {
   ];
 
   return (
-    <Element className="skills_container" id="Skills" >
+    <div className="skills_container" id="Skills" >
       <div
         // variants={fadeIn("right", 0.2)}
         // initial="hidden"
@@ -86,7 +85,7 @@ const Skills = () => {
           );
         })}
       </div>
-    </Element>
+    </div>
   );
 };
 
